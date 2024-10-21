@@ -1,26 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/21 17:23:06 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/21 17:23:08 by iezzam           ###   ########.fr       */
+/*   Created: 2024/10/21 17:23:49 by iezzam            #+#    #+#             */
+/*   Updated: 2024/10/21 17:38:24 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalnum(int c)
+char	*ft_strdup(const char *str)
 {
-    if (ft_isdigit(c) || ft_isalpha(c))
-        return (c);
-    return 0;
-}
+	int		i;
+	char	*ptr;
 
-// int main ()
+	if (!(ptr = (char *)malloc((ft_strlen(str) + 1) * sizeof(char))))
+		return (NULL);
+	i = 0;
+	while (str[i] != '\0')
+	{
+		ptr[i] = str[i];
+		i++;
+	}
+	ptr[i] = '\0';
+	return (ptr);
+}
+// int main()
 // {
-//     printf("%d\n", ft_isalnum('a'));
-//     printf("%d\n", ft_isalnum('\n'));
+//     char k[] = "kaneki";
+//     char *ptr = ft_strdup(k);
+
+//     printf("%s\n", ptr);
+
+//     free(ptr);
 // }
