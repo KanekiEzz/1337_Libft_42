@@ -16,6 +16,7 @@ int ft_isdigit(int c);
 int ft_isalnum(int ch);
 size_t ft_strlen(const char *s);
 char *strchr(const char *str, int search);
+int    ft_atoi(const char *str);
 
 void *ft_memset(void *ptr, int c, size_t len);
 
