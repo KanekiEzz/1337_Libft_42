@@ -1,35 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 18:06:47 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/21 18:06:50 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/10/21 21:22:15 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dst, const char *src)
+size_t ft_strlcpy(char *dest, const char *src, size_t destsize)
 {
-	int	i;
+	int i;
+	if (destsize == 0)
+		return (ft_strlen(src));
 
 	i = 0;
-	while (src[i] != '\0')
+	while (src[i] != '\0' && i < destsize - 1)
 	{
-		dst[i] = src[i];
+		dest[i] = src[i];
 		i++;
 	}
-	dst[i] = '\0';
-	return (dst);
+	dest[i] = '\0';
+	return ft_strlen(src);
 }
 
 // int main ()
 // {
 //     char k[] = "kaneki";
-//     char l[] = "k";
-//     ft_strcpy(l, k);
+//     char l[200] = "m";
+//     int i = (int)ft_strlcpy(l, k, 4);
 //     printf("%s\n", l);
+//     printf("%d\n", i);
 // }
