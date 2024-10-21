@@ -1,35 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/21 18:06:47 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/21 18:06:50 by iezzam           ###   ########.fr       */
+/*   Created: 2024/10/21 18:18:37 by iezzam            #+#    #+#             */
+/*   Updated: 2024/10/21 18:27:35 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dst, const char *src)
+char   *ft_strncpy(char * dst, const char * src, size_t len)
 {
-	int	i;
+    int i;
 
-	i = 0;
-	while (src[i] != '\0')
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	dst[i] = '\0';
-	return (dst);
+    i = 0;
+    while (i  < len - 1 && src[i])
+    {
+        dst[i] = src[i];
+        i++;
+    }
+    while (i < len)
+    {
+        dst[i] = '\0';
+        i++;
+    }
+    return (dst);
 }
 
 // int main ()
 // {
-//     char k[] = "kaneki";
-//     char l[] = "k";
-//     ft_strcpy(l, k);
-//     printf("%s\n", l);
+//     char src[] = "Hello, World!";
+//     char dst[11];
+//     ft_strncpy(dst, src, 10);
+//     printf("%s",  dst);
 // }
