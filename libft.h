@@ -6,7 +6,7 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 18:10:39 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/21 18:22:04 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/10/21 18:44:44 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,11 @@ int					ft_tolower(int c);
 char				*ft_strchr(const char *str, int search);
 char                *ft_strcpy(char *dst, const char *src);
 char                *ft_strncpy(char * dst, const char * src, size_t len);
-char				*ft_strrchr(const char *s, int c);
+char				*ft_strrchr(const char *s, int search);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
-char				*ft_strnstr(const char *haystack, const char *needle,
-						size_t len);
+char				*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int					ft_atoi(const char *str);
 void				*ft_calloc(size_t count, size_t size);
 char				*ft_strdup(const char *s);
