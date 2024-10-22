@@ -6,7 +6,7 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 18:06:47 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/21 21:22:15 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/10/22 12:25:00 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t destsize)
 {
-	int	i;
+	size_t	i;
 
 	if (destsize == 0)
 		return (ft_strlen(src));

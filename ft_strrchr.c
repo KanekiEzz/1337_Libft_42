@@ -6,13 +6,13 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 17:24:00 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/21 17:24:01 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/10/22 12:26:13 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int search)
+char	*ft_strrchr(const char *str, int search)
 {
 	int	len_str;
 
@@ -26,17 +26,10 @@ char	*ft_strchr(const char *str, int search)
 	return (NULL);
 }
 
-// int main()
+// int	main(void)
 // {
-//     const char *str = "Hello kaneki ken World!";
-//     char *result = ft_strchr(str, 'k');
+// 	const char *str = "Hello kaneki ken World!";
+// 	char *result = ft_strrchr(str, 'p');
 
-//     if (result)
-//     {
-//         printf("Found: %s\n", result);
-//     }
-//     else
-//     {
-//         printf("Character not found.\n");
-//     }
+// 	printf("Found: %s\n", result);
 // }
