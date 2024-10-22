@@ -6,7 +6,7 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 18:12:22 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/22 23:37:29 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/10/22 23:38:49 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memset(void *ptr, int c, size_t len)
 	while (i < len)
 		str[i++] = (unsigned char)c;
 	return (ptr);
-}`
+}
 
 // int main()
 // {
