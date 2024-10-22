@@ -1,43 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/21 17:23:49 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/22 23:16:17 by iezzam           ###   ########.fr       */
+/*   Created: 2024/10/22 18:39:05 by iezzam            #+#    #+#             */
+/*   Updated: 2024/10/22 19:06:31 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *str)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int		i;
-	char	*ptr;
-	int		len;
+	size_t			i;
+	unsigned char	*s1_;
+	unsigned char	*s2_;
 
-	len = (ft_strlen(str) + 1);
-	ptr = (char *)malloc(len * sizeof(char));
-	if (!ptr)
-		return (NULL);
 	i = 0;
-	while (str[i] != '\0')
+	s1_ = (unsigned char *)s1;
+	s2_ = (unsigned char *)s2;
+	while (i < n)
 	{
-		ptr[i] = str[i];
+		if (s1_[i] != s2_[i])
+			return (s1_[i] - s2_[i]);
 		i++;
 	}
-	ptr[i] = '\0';
-	return (ptr);
+	return (0);
 }
 
-// int main()
+// int	main(void)
 // {
-//     char k[] = "kaneki";
-//     char *ptr = ft_strdup(k);
+// 	char	p[] = "p";
+// 	char	l[] = "";
+// 	int		cmp;
+// 	int		cpmp;
 
-//     printf("%s\n", ptr);
-
-//     free(ptr);
+// 	cmp = memcmp(p, l, 12);
+// 	cpmp = ft_memcmp(p, l, 12);
+// 	printf("%d\n", cmp);
+// 	printf("%d", cpmp);
 // }

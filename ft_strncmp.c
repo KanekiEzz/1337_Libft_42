@@ -1,24 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/21 17:23:15 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/22 14:10:00 by iezzam           ###   ########.fr       */
+/*   Created: 2024/10/22 13:45:55 by iezzam            #+#    #+#             */
+/*   Updated: 2024/10/22 21:42:11 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
+	size_t	i;
+
+	i = 0;
+	while (s1[i] && s2[i] && s1[i] == s2[i] && i < n - 1)
+		i++;
+	if (i == n)
+		i--;
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
-// 	return (1);
-// return (0);
-// int main ()
+
+// int	main(void)
 // {
-//     printf("%d\n", ft_isalpha('/'));
+// 	char s1[] = "";
+// 	char s2[] = "";
+
+// 	printf("%d\n", ft_strncmp(s1, s2, 3));
+// 	printf("%d\n", strncmp(s1, s2, 3));
 // }

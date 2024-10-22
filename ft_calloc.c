@@ -1,43 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/21 17:23:49 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/22 23:16:17 by iezzam           ###   ########.fr       */
+/*   Created: 2024/10/22 23:17:29 by iezzam            #+#    #+#             */
+/*   Updated: 2024/10/22 23:25:47 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "unistd.h"
 
-char	*ft_strdup(const char *str)
+void	*ft_calloc(size_t count, size_t size)
 {
-	int		i;
 	char	*ptr;
-	int		len;
 
-	len = (ft_strlen(str) + 1);
-	ptr = (char *)malloc(len * sizeof(char));
+	ptr = (char *)malloc(count * size);
 	if (!ptr)
 		return (NULL);
-	i = 0;
-	while (str[i] != '\0')
-	{
-		ptr[i] = str[i];
-		i++;
-	}
-	ptr[i] = '\0';
+	ft_bzero(ptr, count * size);
 	return (ptr);
 }
 
 // int main()
 // {
-//     char k[] = "kaneki";
-//     char *ptr = ft_strdup(k);
+//   size_t num_elements = 5;
+//   size_t element_size = sizeof(int);
 
-//     printf("%s\n", ptr);
+//   int *array = (int *)ft_calloc(num_elements, element_size);
 
-//     free(ptr);
+//   size_t i = 0;
+//   while ( i < num_elements)
+//   {
+//     printf("array[%zu] = %d\n", i, array[i]);
+//     i++;
+//   }
+//   free(array);
+//   return (0);
 // }
