@@ -1,41 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/21 21:25:43 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/22 09:34:26 by iezzam           ###   ########.fr       */
+/*   Created: 2024/10/22 09:22:53 by iezzam            #+#    #+#             */
+/*   Updated: 2024/10/22 09:29:39 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include  "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void    *ft_memcpy(void *dest, const void *src, size_t n)
 {
-	// size_t	i;
-	// char	*str;
+    unsigned char *destt = (unsigned char *)dest;
+    unsigned char *srcc = (unsigned char *)src;
 
-	// str = (char *)s;
-	// while (n > 0)
-	// {
-	// 	*(str++) = 0;
-	// 	n--;
-	// }
-	ft_memset(s, 0, n);
+    while (n--)
+        *(destt++) = *(srcc++);
+    return dest;
 }
 
-int	main(void)
-{
-	char p[] = "kaneki kne";
-	ft_bzero(p, 2);
-	printf("%s", p);
-}
+int main() {
+    char src[] = "Hello, World!";
+    char dest[20];
 
-// int main(void)
-// {
-// 	int p = 123;
-// 	ft_bzero(&p, sizeof(p));
-// 	printf("%d", p);
-// }
+    ft_memcpy(dest, src, 13);
+    dest[13] = '\0';
+
+    return 0;
+}
