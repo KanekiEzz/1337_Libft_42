@@ -6,7 +6,7 @@
 #    By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/23 00:11:25 by iezzam            #+#    #+#              #
-#    Updated: 2024/10/23 01:11:54 by iezzam           ###   ########.fr        #
+#    Updated: 2024/10/23 02:11:19 by iezzam           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,6 +42,7 @@ FILES = ft_memset \
 		ft_calloc\
 		ft_substr\
 		ft_strjoin\
+		ft_strtrim\
 
 SRCS_DIR = ./
 SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES)))

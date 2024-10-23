@@ -6,7 +6,7 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 18:10:39 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/23 00:27:53 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/10/23 02:12:31 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,8 @@ char				*ft_strnstr(const char *haystack, const char *needle,
 char				*ft_strdup(const char *str);
 void				*ft_calloc(size_t count, size_t size);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
-
 char				*ft_strjoin(char const *s1, char const *s2);
+char				*ft_strtrim(char const *s1, char const *set);
 
 typedef struct s_list
 {
