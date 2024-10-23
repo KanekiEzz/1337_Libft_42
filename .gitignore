@@ -1,2 +1,3 @@
-*t.tldr
-*.a.out
+.t.tldr
+.a.out
+.vscode/
