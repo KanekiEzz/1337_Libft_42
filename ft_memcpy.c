@@ -6,7 +6,7 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 09:22:53 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/23 16:38:11 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/10/23 21:42:13 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,22 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 }
 
 // int main() {
-//     char src[] = "Hello, World!";
-//     char dest[20];
+// char src[] = "Hello, World!";
+// char dest[20];
 
-//     ft_memcpy(dest, src, 9);
-//     dest[13] = '\0';
-//     printf("%s", dest);
+// ft_memcpy(dest, src, 9);
+// dest[13] = '\0';
+// printf("%s", dest);
 
-//     return (0);
+// char src[40] = "ABCDE";
+// char *dest = src + 4;
+
+// ft_memcpy(dest,src,5);
+// memcpy(dest,src,5);
+
+// printf("%s",dest);
+
+// return (0);
 // }
 
 // int	main(void)

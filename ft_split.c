@@ -6,7 +6,7 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 10:04:15 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/23 18:29:05 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/10/23 20:57:53 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,11 +49,10 @@ void	ft_free(char **ptr, int k)
 {
 	int	i;
 
-	if (k == 1)
-		free(ptr[k]);
 	i = 0;
-	while (i < k)
-		free(ptr[k++]);
+	--k;
+	while (i <= k)
+		free(ptr[i++]);
 }
 
 char	**_loop(char **ptr, const char *s, char c)
@@ -72,7 +71,7 @@ char	**_loop(char **ptr, const char *s, char c)
 			word_len = _len_word(&s[i], c);
 			ptr[k] = (char *)malloc((word_len + 1) * sizeof(char));
 			if (!ptr[k])
-				return (NULL);
+				return (ft_free(ptr, k), NULL);
 			j = 0;
 			while (j < word_len)
 				ptr[k][j++] = s[i++];
