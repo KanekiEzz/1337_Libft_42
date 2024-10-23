@@ -6,7 +6,7 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 09:22:53 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/22 21:54:50 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/10/23 16:38:11 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char	*destt;
 	unsigned char	*srcc;
 
+	if (!dest && !src)
+		return (NULL);
+	if (n == 0)
+		return (dest);
 	destt = (unsigned char *)dest;
 	srcc = (unsigned char *)src;
 	while (n--)

@@ -6,7 +6,7 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 01:58:55 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/23 09:57:44 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/10/23 10:13:32 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	end;
 	char	*ptr;
 
+	if (!s1)
+		return (NULL);
+	if (!set)
+		return (ft_strdup(s1));
 	start = 0;
 	end = strlen(s1);
 	while (s1[start] && ft_strchr(set, s1[start]))
