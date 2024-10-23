@@ -6,7 +6,7 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 01:58:55 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/23 02:37:11 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/10/23 02:40:15 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,32 +101,22 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	start = 0;
 	end = strlen(s1);
-	// البحث عن أول حرف غير موجود في set من البداية
 	while (s1[start] && strchr(set, s1[start]))
-	{
 		start++;
-	}
-	// البحث عن آخر حرف غير موجود في set من النهاية
 	while (end > start && strchr(set, s1[end - 1]))
-	{
 		end--;
-	}
-	// تخصيص الذاكرة للسلسلة الجديدة
 	trimmed = malloc(end - start + 1);
 	if (!trimmed)
-	{
-		return (NULL); // فشل التخصيص
-	}
-	// نسخ النص المتبقي
+		return (NULL);
 	strncpy(trimmed, s1 + start, end - start);
-	trimmed[end - start] = '\0'; // إضافة نهاية السلسلة
+	trimmed[end - start] = '\0';
 	return (trimmed);
 }
 
-int	main(void)
-{
-	char *result = ft_strtrim("  abcdefj  ", "be");
-	printf("Result: '%s'\n", result);
-	free(result); // إذا قمت بتخصيص الذاكرة
-	return (0);
-}
+// int	main(void)
+// {
+// 	char *result = ft_strtrim("  abcdefj  ", "be");
+// 	printf("Result: '%s'\n", result);
+// 	free(result); // إذا قمت بتخصيص الذاكرة
+// 	return (0);
+// }
