@@ -1,43 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/23 21:48:45 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/24 08:11:24 by iezzam           ###   ########.fr       */
+/*   Created: 2024/10/24 09:10:45 by iezzam            #+#    #+#             */
+/*   Updated: 2024/10/24 09:51:15 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	_putnbr(long long n, int fd)
+// static void f(unsigned int i, char *c)
+// {
+//     *c = toupper(*c);
+// }
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	if (n < 0)
+	unsigned int	i;
+
+	i = 0;
+	while (s[i])
 	{
-		ft_putchar_fd('-', fd);
-		n *= -1;
+		(*f)(i, &s[i]);
+		i++;
 	}
-	if (n > 9)
-	{
-		_putnbr(n / 10, fd);
-		_putnbr(n % 10, fd);
-	}
-	else
-		ft_putchar_fd(n + '0', fd);
 }
 
-void	ft_putnbr_fd(int n, int fd)
-{
-	if (fd < 0)
-		return ;
-	_putnbr(n, fd);
-}
-// int	main(void)
+// int main ()
 // {
-// 	int i = -2147483648;
-// 		ft_putnbr_fd(i, 1);
-// 		ft_putchar_fd('\n', 1);
-// 	return (0);
+//     char str[] = "Hello, World!";
+//     ft_striteri(str, f);
+//     printf("%s\n", str);
 // }

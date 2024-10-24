@@ -6,7 +6,7 @@
 #    By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/23 00:11:25 by iezzam            #+#    #+#              #
-#    Updated: 2024/10/23 21:53:41 by iezzam           ###   ########.fr        #
+#    Updated: 2024/10/24 09:12:08 by iezzam           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,6 +45,8 @@ FILES = ft_memset \
 		ft_strtrim\
 		ft_split\
 		ft_itoa\
+		ft_strmapi\
+		ft_striteri\
 		ft_putchar_fd\
 		ft_putstr_fd\
 		ft_putendl_fd\
