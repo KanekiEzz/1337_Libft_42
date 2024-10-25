@@ -24,6 +24,11 @@ void	del(void *content)
 		free(content);
 }
 
+void f(void *content)
+{
+	free(content);
+}
+
 int	main(void)
 {
 	t_list *node1 = ft_lstnew(ft_strdup("node1"));
