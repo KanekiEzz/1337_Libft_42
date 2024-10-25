@@ -6,19 +6,30 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 17:22:51 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/21 17:28:06 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/10/25 09:27:40 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int	ft_check_flow(int sign)
+{
+	if (sign == 1)
+		return (-1);
+	else
+		return (0);
+}
+
+
 int	ft_atoi(const char *str)
 {
-	int	result;
+	unsigned long long	result;
 	int	sign;
 
 	result = 0;
 	sign = 1;
+	if (!*str)
+		return (0);
 	while (*str == ' ' || (*str >= 9 && *str <= 13))
 		str++;
 	if (*str == '-' || *str == '+')
@@ -29,10 +40,12 @@ int	ft_atoi(const char *str)
 	}
 	while (*str >= '0' && *str <= '9')
 	{
+		if (result > (9223372036854775807ULL - (*str - '0')) / 10)
+			return (ft_check_flow(sign));
 		result = (result * 10) + (*str - '0');
 		str++;
 	}
-	return (result * sign);
+	return ((int)result * sign);
 }
 
 // int   main(void)

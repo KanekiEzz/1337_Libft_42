@@ -6,7 +6,7 @@
 #    By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/23 00:11:25 by iezzam            #+#    #+#              #
-#    Updated: 2024/10/24 17:14:28 by iezzam           ###   ########.fr        #
+#    Updated: 2024/10/25 08:11:53 by iezzam           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,6 +59,7 @@ FILES_B = 	ft_lstnew \
 			ft_lstadd_back\
 			ft_lstdelone\
 			ft_lstclear\
+			ft_lstiter\
 
 SRCS_DIR = ./
 SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES)))

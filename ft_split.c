@@ -6,13 +6,13 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 10:04:15 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/24 15:14:45 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/10/25 09:30:17 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	_count_word(const char *str, char c)
+static size_t	_count_word(const char *str, char c)
 {
 	size_t	i;
 	size_t	kaneki;
@@ -35,7 +35,7 @@ size_t	_count_word(const char *str, char c)
 	return (word);
 }
 
-size_t	_len_word(const char *s, char c)
+static size_t	_len_word(const char *s, char c)
 {
 	size_t	len;
 
@@ -45,7 +45,7 @@ size_t	_len_word(const char *s, char c)
 	return (len);
 }
 
-void	ft_free(char **ptr, int k)
+static void	ft_free(char **ptr, int k)
 {
 	int	i;
 
@@ -53,9 +53,10 @@ void	ft_free(char **ptr, int k)
 	--k;
 	while (i <= k)
 		free(ptr[i++]);
+	free(ptr);
 }
 
-char	**_loop(char **ptr, const char *s, char c)
+static char	**_loop(char **ptr, const char *s, char c)
 {
 	size_t	i;
 	size_t	k;

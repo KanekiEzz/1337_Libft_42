@@ -24,9 +24,9 @@ void	del(void *content)
 		free(content);
 }
 
-void f(void *content)
+void	f(void *content)
 {
-	free(content);
+	printf("%s",  (char *)content);
 }
 
 int	main(void)
@@ -53,7 +53,9 @@ int	main(void)
 
 	// ft_lstclear(&node1, del);
 
-	print_all_list(node1);
+	ft_lstiter(node1, f);
+
+	// print_all_list(node1);
 	// printf("len node: %d\n", ft_lstsize(node1));
 
 	// printf("print last list: ");
