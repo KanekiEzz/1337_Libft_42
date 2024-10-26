@@ -6,7 +6,7 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 17:23:06 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/22 10:34:20 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/10/26 17:19:53 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,3 @@ int	ft_isalnum(int c)
 		return (c);
 	return (0);
 }
-
-// int main ()
-// {
-//     printf("%d\n", ft_isalnum('a'));
-//     printf("%d\n", ft_isalnum('\n'));
-// }

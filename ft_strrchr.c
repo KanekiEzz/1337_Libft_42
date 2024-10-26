@@ -6,7 +6,7 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 17:24:00 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/22 12:26:13 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/10/26 17:31:30 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,3 @@ char	*ft_strrchr(const char *str, int search)
 	}
 	return (NULL);
 }
-
-// int	main(void)
-// {
-// 	const char *str = "Hello kaneki ken World!";
-// 	char *result = ft_strrchr(str, 'p');
-
-// 	printf("Found: %s\n", result);
-// }

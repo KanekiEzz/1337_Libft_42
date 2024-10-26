@@ -6,7 +6,7 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 00:27:00 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/23 01:16:48 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/10/26 19:36:41 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,14 +38,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ptr[i] = 0;
 	return (ptr);
 }
-
-// int	main(void)
-// {
-// 	char	s1[] = "kaneki";
-// 	char	s2[] = "n";
-// 	char	*result;
-
-// 	result = ft_strjoin(s1, s2);
-// 	printf("%s\n", result);
-// 	free(result);
-// }

@@ -6,7 +6,7 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 17:24:11 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/24 09:20:58 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/10/26 17:25:20 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,3 @@ int	ft_toupper(int c)
 		return (c - 32);
 	return (c);
 }
-
-// int main ()
-// {
-//     char p = ft_toupper('n');
-
-//     printf("%c", p);
-// }

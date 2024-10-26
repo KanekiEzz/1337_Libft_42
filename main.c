@@ -2,6 +2,9 @@
 
 int	main(void)
 {
-	char *str = "Hello, World!";
-	printf("%zu", ft_strlen(str));
+    char *dest = "kaneki";
+    char *src = "ken";
+
+	printf("%zu\n", ft_strlcat(dest, src, 1));
+	printf("%zu\n", strlcat(dest, src, 1));
 }
