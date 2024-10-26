@@ -24,9 +24,20 @@ void	del(void *content)
 		free(content);
 }
 
-void	f(void *content)
+// void	f(void *content)
+// {
+// 	printf("%s",  (char *)content);
+// }
+
+void	*f(void *content)
 {
-	printf("%s",  (char *)content);
+	char	*str;
+
+	str = (malloc(sizeof(char) + 1));
+	if (!str)
+		return (NULL);
+	*str = *(char *)content + 48;
+	return (str);
 }
 
 int	main(void)
@@ -53,10 +64,14 @@ int	main(void)
 
 	// ft_lstclear(&node1, del);
 
-	ft_lstiter(node1, f);
+	// ft_lstiter(node1, f);
+
+	// print_all_list(ft_lstmap(node1, f, del));
 
 	// print_all_list(node1);
-	// printf("len node: %d\n", ft_lstsize(node1));
+	t_list *tmp = NULL;
+	t_list *ptr = tmp;
+	printf("len node: %d\n", ft_lstsize(ptr));
 
 	// printf("print last list: ");
 	// print_all_list(ft_lstlast(node1));
