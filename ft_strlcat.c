@@ -6,7 +6,7 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 18:28:38 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/26 11:16:26 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/10/26 19:46:01 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,3 @@ size_t	ft_strlcat(char *dest, const char *src, size_t destsize)
 	dest[l_dest + i] = '\0';
 	return (l_dest + l_src);
 }
-
-// int	main(void)
-// {
-// 	char	dest[20] = "kan";
-
-// 	printf("ft_strlcat %zu\n", ft_strlcat(dest, "lorem ipsum dolor sit amet",
-// 			20));
-// 	// printf("strlcat %zu\n", strlcat(dest, "lorem ipsum dolor sit amet",20));
-// 	return (0);
-// }

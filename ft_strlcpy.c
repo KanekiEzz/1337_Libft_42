@@ -6,7 +6,7 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 18:06:47 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/22 12:25:00 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/10/26 20:20:13 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,3 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t destsize)
 	dest[i] = '\0';
 	return (ft_strlen(src));
 }
-
-// int main ()
-// {
-//     char k[] = "kaneki";
-//     char l[200] = "m";
-//     int i = (int)ft_strlcpy(l, k, 4);
-//     printf("%s\n", l);
-//     printf("%d\n", i);
-// }
