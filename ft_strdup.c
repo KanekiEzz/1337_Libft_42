@@ -6,7 +6,7 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 17:23:49 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/22 23:16:17 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/10/27 10:28:06 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strdup(const char *str)
 {
-	int		i;
+	size_t	i;
 	char	*ptr;
-	int		len;
+	size_t	len;
 
 	len = (ft_strlen(str) + 1);
 	ptr = (char *)malloc(len * sizeof(char));
@@ -31,13 +31,3 @@ char	*ft_strdup(const char *str)
 	ptr[i] = '\0';
 	return (ptr);
 }
-
-// int main()
-// {
-//     char k[] = "kaneki";
-//     char *ptr = ft_strdup(k);
-
-//     printf("%s\n", ptr);
-
-//     free(ptr);
-// }

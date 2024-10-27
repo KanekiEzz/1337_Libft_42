@@ -6,7 +6,7 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 21:48:45 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/24 08:11:24 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/10/27 09:56:08 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,3 @@ void	ft_putnbr_fd(int n, int fd)
 		return ;
 	_putnbr(n, fd);
 }
-// int	main(void)
-// {
-// 	int i = -2147483648;
-// 		ft_putnbr_fd(i, 1);
-// 		ft_putchar_fd('\n', 1);
-// 	return (0);
-// }
