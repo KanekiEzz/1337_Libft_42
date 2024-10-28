@@ -6,7 +6,7 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 16:21:15 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/23 20:14:55 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/10/28 01:48:22 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,14 +60,3 @@ char	*ft_itoa(int n)
 	}
 	return (ptr);
 }
-
-// int	main(void)
-// {
-// 	int	p;
-// 	int	m;
-
-// 	p = -2147483648;
-// 	m = 0;
-// 	printf("%s\n", ft_itoa(p));
-// 	printf("%s\n", ft_itoa(m));
-// }

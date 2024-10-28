@@ -6,7 +6,7 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 20:25:27 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/23 20:34:10 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/10/27 16:14:03 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
+	if (fd < 0)
+		return ;
 	write(fd, &c, 1);
 }
-
-// int main()
-// {
-//     ft_putchar_fd('a', 1);
-// }

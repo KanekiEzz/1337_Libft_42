@@ -6,7 +6,7 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 01:58:55 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/23 10:13:32 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/10/28 01:49:36 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ptr[end - start] = '\0';
 	return (ptr);
 }
-
-// int	main(void)
-// {
-// 	char *result = ft_strtrim("jcabcdefj", "cj");
-// 	printf("'%s'\n", result);
-// 	return (0);
-// }

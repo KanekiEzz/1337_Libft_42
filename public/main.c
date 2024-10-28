@@ -1,15 +1,43 @@
+
+// file f
+// ps
+
+
+// lsof -p 6977  
+
+
+// zsh     6977 iezzam    0u   CHR  16,10  0t63432                 687 /dev/ttys010
+// zsh     6977 iezzam    1u   CHR  16,10  0t63432                 687 /dev/ttys010
+// zsh     6977 iezzam    2u   CHR  16,10  0t63432                 687 /dev/ttys010
+// zsh     6977 iezzam   10u   CHR  16,10  0t19882                 687 /dev/ttys010
+
+
+
 #include <stdio.h>
-int global; 
-int main()
-{
-    union u1 {
-    char a;
-    short b;
-    int c;
-};
-union u1 u;
-u.c = htonl(0x1122FF00);
-printf("char: %d short: %d int: %d\n", u.a, u.b, u.c);
-printf("(short) u.c: %d\n", (short) u.c);
-printf("u.b: %d\n", u.b);
+#include <unistd.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <string.h>
+
+int main(){
+    
+    char* fileName = "sample.txt";
+
+    int fd = open(fileName, O_RDWR);
+    
+    if(fd == -1){
+        printf("\nError Opening File!!\n");
+        exit(1);
+    }
+    else{
+        printf("\nFile %s opened successfully!\n", fileName);
+    }
+
+    char *buffer = "Hello Educative User!\n";
+
+    int bytesWritten = write(1, buffer, strlen(buffer));
+
+    printf("%d bytes written successfully!\n", bytesWritten);
+
+    return 0;
 }

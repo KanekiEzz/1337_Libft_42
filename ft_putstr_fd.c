@@ -6,7 +6,7 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 20:46:33 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/23 21:12:50 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/10/27 14:38:13 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,3 @@ void	ft_putstr_fd(char *s, int fd)
 	while (s[i])
 		ft_putchar_fd(s[i++], fd);
 }
-
-// int	main(void)
-// {
-// 	char *str = "kaneki ken";
-//     ft_putstr_fd(str, 1);
-// }

@@ -6,7 +6,7 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 10:04:15 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/26 18:49:52 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/10/28 01:48:54 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,20 +96,3 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (_loop(ptr, s, c));
 }
-
-// void	f(void)
-// {
-// 	system("leaks a.out");
-// }
-// int	main(void)
-// {
-// 	char *s = "aaaaa, d m d as m, das, dsa,";
-// 	char **o = ft_split(s, ',');
-// 	atexit(f);
-// 	int i = 0;
-// 	while (o[i])
-// 	{
-// 		printf("%s", o[i++]);
-// 		printf("\n");
-// 	}
-// }

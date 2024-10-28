@@ -6,7 +6,7 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 17:24:06 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/24 09:20:49 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/10/28 01:49:44 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,3 @@ int	ft_tolower(int c)
 		return (c + 32);
 	return (c);
 }
-
-// int	main(void)
-// {
-// 	char v = ft_tolower('M');
-// 	char vl = tolower('M');
-// 	printf("%c\n", v);
-// 	printf("%c", vl);
-// }

@@ -6,7 +6,7 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 18:39:05 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/22 19:06:31 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/10/28 01:41:31 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,16 +29,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
-// int	main(void)
-// {
-// 	char	p[] = "p";
-// 	char	l[] = "";
-// 	int		cmp;
-// 	int		cpmp;
-
-// 	cmp = memcmp(p, l, 12);
-// 	cpmp = ft_memcmp(p, l, 12);
-// 	printf("%d\n", cmp);
-// 	printf("%d", cpmp);
-// }

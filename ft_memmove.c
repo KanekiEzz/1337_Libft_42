@@ -6,7 +6,7 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 09:53:07 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/22 12:52:09 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/10/28 01:41:03 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,21 +28,3 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 		ft_memcpy(dest, src, len);
 	return (dest);
 }
-
-// int	main(void)
-// {
-// 	char	src[] = "kaneki ken";
-// 	char	dst[] = "zzzz";
-// 	int		i;
-
-// 	ft_memmove(dst, src, 3);
-// 	i = 0;
-// 	while (i < 3)
-// 		printf("%c", src[i++]);
-
-//     printf("\n");
-//     memcpy(dst, src, 3);
-// 	i = 0;
-// 	while (i < 3)
-// 		printf("%c", src[i++]);
-// }
