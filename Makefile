@@ -1,7 +1,7 @@
 NAME = libft.a
 CC  = cc
 CFLAGS = -Wall -Wextra -Werror
-AR = ar -rsc
+AR = ar -rc
 RM  = rm -f
 
 SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
@@ -40,3 +40,5 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
+
+re_bonus: fclean bonus
