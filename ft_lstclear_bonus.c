@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 17:03:56 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/24 19:15:15 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/10/28 15:32:50 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	while (curr_node)
 	{
 		next_node = curr_node->next;
-		(*del)(curr_node->content);
+		del(curr_node->content);
 		free(curr_node);
 		curr_node = next_node;
 	}
