@@ -21,17 +21,16 @@ SRCSB = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
 OBJS = $(SRCS:.c=.o)
 OBJSB = $(SRCSB:.c=.o)
 
-$(NAME): $(OBJS)
-	$(AR) $(NAME) $(OBJS)
+$(NAME): $(OBJS) $(OBJSB)
+	$(AR) $(NAME) $(OBJS) $(OBJSB)
 
 %.o: %.c libft.h
-	$(CC) $(CFLAGS) -c $<
-
+	$(CC) $(CFLAGS) -c $< -o $@
 
 all: $(NAME)
 
-bonus:  $(OBJSB)
-	$(AR) $(NAME) $(OBJSB)
+bonus: $(OBJS) $(OBJSB)
+	$(AR) $(NAME) $(OBJS) $(OBJSB)
 
 clean:
 	$(RM) $(OBJS) $(OBJSB)
@@ -42,3 +41,5 @@ fclean: clean
 re: fclean all
 
 re_bonus: fclean bonus
+
+.PHONY: all clean fclean re bonus

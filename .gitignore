@@ -1,0 +1,4 @@
+*.out
+.vscode
+l7wa.c
+*.md

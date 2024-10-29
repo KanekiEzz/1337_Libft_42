@@ -6,7 +6,7 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 17:22:51 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/28 01:48:08 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/10/29 22:16:42 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ static int	_check_overflow(int sign)
 
 int	ft_atoi(const char *str)
 {
-	unsigned long long	result;
-	int					sign;
+	long	result;
+	int		sign;
 
 	result = 0;
 	sign = 1;
@@ -39,10 +39,10 @@ int	ft_atoi(const char *str)
 	}
 	while (*str >= '0' && *str <= '9')
 	{
-		if (result > (9223372036854775807ULL - (*str - '0')) / 10)
+		if (result > (LONG_MAX - (*str - '0')) / 10)
 			return (_check_overflow(sign));
 		result = (result * 10) + (*str - '0');
 		str++;
 	}
-	return ((int)result * sign);
+	return (result * sign);
 }
