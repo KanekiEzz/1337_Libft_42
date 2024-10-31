@@ -6,7 +6,7 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 09:53:07 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/31 04:52:28 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/10/31 22:28:15 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,11 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	s = (unsigned char *)src;
 	if (s < d && d < s + len)
 	{
-		while (len-- > 0)
-			*(d + len) = *(s + len);
+		while (len > 0)
+		{
+			len--;
+			d[len] = s[len];
+		}
 	}
 	else
 		ft_memcpy(dest, src, len);

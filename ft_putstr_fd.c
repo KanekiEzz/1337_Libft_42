@@ -6,7 +6,7 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 20:46:33 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/27 14:38:13 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/10/31 22:33:22 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	size_t	i;
+	int	i;
 
 	if (fd < 0 || !s)
 		return ;
