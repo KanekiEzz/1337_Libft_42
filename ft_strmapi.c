@@ -6,7 +6,7 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 08:29:48 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/30 16:01:11 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/10/31 04:43:03 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*ptr;
 
 	if (!s || !f)
-		return (NULL);
-	ptr = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
+		return (ft_strdup(""));
+	ptr = malloc((ft_strlen(s) + 1) * sizeof(char));
 	if (!ptr)
 		return (NULL);
 	i = 0;

@@ -6,18 +6,15 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 18:10:39 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/28 20:23:05 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/10/31 03:16:25 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <ctype.h>
 # include <limits.h>
-# include <stdio.h>
 # include <stdlib.h>
-# include <string.h>
 # include <unistd.h>
 
 int					ft_isalpha(int c);

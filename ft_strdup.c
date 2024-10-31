@@ -6,7 +6,7 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 17:23:49 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/27 10:28:06 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/10/31 04:39:56 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strdup(const char *str)
 	size_t	len;
 
 	len = (ft_strlen(str) + 1);
-	ptr = (char *)malloc(len * sizeof(char));
+	ptr = malloc(len * sizeof(char));
 	if (!ptr)
 		return (NULL);
 	i = 0;

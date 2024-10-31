@@ -6,7 +6,7 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 09:22:53 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/30 15:40:04 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/10/31 04:47:25 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 	if (!dest && !src)
 		return (NULL);
+	if (n == 0)
+		return (dest);
 	destt = (unsigned char *)dest;
 	srcc = (unsigned char *)src;
 	i = 0;
