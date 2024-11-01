@@ -6,7 +6,7 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 16:21:15 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/31 00:10:52 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/10/31 23:03:46 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char	*ft_itoa(int n)
 
 	ln = (long long)n;
 	len = _len_integer(ln);
-	ptr = (char *)malloc(sizeof(char) * (len + 1));
+	ptr = malloc(sizeof(char) * (len + 1));
 	if (!ptr)
 		return (NULL);
 	ptr[len] = '\0';

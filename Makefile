@@ -21,8 +21,8 @@ SRCSB = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
 OBJS = $(SRCS:.c=.o)
 OBJSB = $(SRCSB:.c=.o)
 
-$(NAME): $(OBJS) $(OBJSB)
-	$(AR) $(NAME) $(OBJS) $(OBJSB)
+$(NAME): $(OBJS)
+	$(AR) $(NAME) $(OBJS)
 
 %.o: %.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@

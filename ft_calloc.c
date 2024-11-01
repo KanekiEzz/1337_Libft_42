@@ -6,7 +6,7 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 23:17:29 by iezzam            #+#    #+#             */
-/*   Updated: 2024/10/31 04:22:19 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/11/01 12:33:40 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,9 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
 
-	if ((int)count < 0 || (int)size < 0)
-	{
+	if (size != 0 && count > SIZE_MAX / size)
 		return (NULL);
-	}
-	ptr = (void *)malloc(count * size);
+	ptr = malloc(count * size);
 	if (!ptr)
 		return (NULL);
 	ft_bzero(ptr, count * size);
