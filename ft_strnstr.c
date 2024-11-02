@@ -6,7 +6,7 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 19:07:57 by iezzam            #+#    #+#             */
-/*   Updated: 2024/11/01 13:06:23 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/11/01 17:32:09 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 	i = 0;
 	j = 0;
+	if (!haystack && len == 0)
+		return (NULL);
 	if (needle[0] == 0)
 		return ((char *)haystack);
 	while (haystack[i] && i < len)
