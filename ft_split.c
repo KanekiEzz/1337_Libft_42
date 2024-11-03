@@ -6,13 +6,13 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 10:04:15 by iezzam            #+#    #+#             */
-/*   Updated: 2024/11/01 21:33:39 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/11/02 15:32:35 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	_count_word(const char *str, char c)
+static size_t	ft_count_word(const char *str, char c)
 {
 	size_t	i;
 	size_t	kaneki;
@@ -35,7 +35,7 @@ static size_t	_count_word(const char *str, char c)
 	return (word);
 }
 
-static size_t	_len_word(const char *s, char c)
+static size_t	ft_len_word(const char *s, char c)
 {
 	size_t	len;
 
@@ -56,7 +56,7 @@ static void	ft_free(char **ptr, int k)
 	free(ptr);
 }
 
-static char	**_loop(char **ptr, const char *s, char c)
+static char	**ft_loop(char **ptr, const char *s, char c)
 {
 	size_t	i;
 	size_t	k;
@@ -69,8 +69,8 @@ static char	**_loop(char **ptr, const char *s, char c)
 	{
 		if (s[i] != c)
 		{
-			word_len = _len_word(&s[i], c);
-			ptr[k] = (char *)malloc((word_len + 1) * sizeof(char));
+			word_len = ft_len_word(&s[i], c);
+			ptr[k] = malloc((word_len + 1) * sizeof(char));
 			if (!ptr[k])
 				return (ft_free(ptr, k), NULL);
 			j = 0;
@@ -91,8 +91,8 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	ptr = (char **)malloc((_count_word(s, c) + 1) * sizeof(char *));
+	ptr = malloc((ft_count_word(s, c) + 1) * sizeof(char *));
 	if (!ptr)
 		return (NULL);
-	return (_loop(ptr, s, c));
+	return (ft_loop(ptr, s, c));
 }

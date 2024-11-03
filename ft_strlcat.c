@@ -6,7 +6,7 @@
 /*   By: iezzam <iezzam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 18:28:38 by iezzam            #+#    #+#             */
-/*   Updated: 2024/11/02 14:23:04 by iezzam           ###   ########.fr       */
+/*   Updated: 2024/11/02 15:01:58 by iezzam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t destsize)
 	size_t	l_dest;
 	size_t	l_src;
 
-	if (!dest)
-		return (ft_strlen(src));
-	if (dest && destsize == 0)
+	if (destsize == 0)
 		return (ft_strlen(src));
 	l_src = ft_strlen(src);
 	l_dest = ft_strlen(dest);
